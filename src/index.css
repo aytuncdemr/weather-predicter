@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{
+
+    scroll-behavior: smooth;
+
+}
+
+.activity-title::after{
+
+    width: 100%;
+    height: 3px;
+    margin-top: 3px;
+    border-radius: 10px;
+    background-color: black;
+    content: "";
+    display: block;
+
+}
+
+a::after{
+
+    width: 0;
+    height: 3px;
+    background-color: black;
+    content: "";
+    display: block;
+    transition: all 0.3s;
+
+}
+
+a:hover::after{
+    width: 100%;
+}
+
+.best-day,.worst-day{
+    position: relative;
+    
+}
+
+
+.best-day::after{
+
+    content: "Best Day";
+    position: absolute;
+    top: 0px;
+    left: -25px;
+    
+    background-color: green;
+    color: white;
+    padding: 0.3rem 0.6rem;
+    border-radius: 10px;
+    transform: rotate(-30deg);
+}
+.worst-day::after{
+    content: "Worst Day";
+    position: absolute;
+    top: 0px;
+    left: -25px;
+    
+    background-color: red;
+    color: white;
+    padding: 0.3rem 0.6rem;
+    border-radius: 10px;
+    transform: rotate(-30deg);
+}
