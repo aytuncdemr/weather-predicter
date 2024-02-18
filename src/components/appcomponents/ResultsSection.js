@@ -14,7 +14,7 @@ export default memo(function ResultsSection() {
 
             (async function get_weather_data() {
                 const response = await fetch(
-                    `http://api.weatherapi.com/v1/forecast.json?key=dbb3e6491001489c929103407231605&days=7&q=${location.coords.latitude},${location.coords.longitude}`
+                    `https://api.weatherapi.com/v1/forecast.json?key=dbb3e6491001489c929103407231605&days=7&q=${location.coords.latitude},${location.coords.longitude}`
                 );
 
                 const data = await response.json();
